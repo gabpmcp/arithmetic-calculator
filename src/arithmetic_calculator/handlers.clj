@@ -115,3 +115,10 @@
 (defn get-user-balance [request]
   (let [user (:identity request)]
     (response/response {:balance (:users/balance user)})))
+
+(defn options-handler
+  "Handler para solicitudes OPTIONS"
+  [request]
+  {:status 200
+   :headers {"Allow" "OPTIONS, GET, POST, PUT, DELETE"}
+   :body ""})
