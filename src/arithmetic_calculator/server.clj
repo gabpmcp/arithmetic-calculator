@@ -14,6 +14,7 @@
    ::http/type              :jetty
    ::http/port              8080
    ::http/allowed-origins   (constantly true)
+   ::http/enable-cors       true
    ::http/secure-headers    {:content-security-policy-settings {:object-src "'none'"}}
    ::http/enable-session    {:cookie-name "SESSIONID"}
    ::http/allowed-methods   [:get :post :put :delete]

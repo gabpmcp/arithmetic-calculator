@@ -111,3 +111,7 @@
         (sql/update! db/datasource :records {:is_deleted true} {:id record-id})
         (response/response {:status "Record deleted"}))
       (response/status (response/response {:error "Record not found"}) 404))))
+
+(defn get-user-balance [request]
+  (let [user (:identity request)]
+    (response/response {:balance (:users/balance user)})))
