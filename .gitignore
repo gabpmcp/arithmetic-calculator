@@ -1,14 +1,46 @@
-pom.xml
-pom.xml.asc
-*.jar
-*.class
-/lib/
-/classes/
+# Archivos y directorios generados por Clojure CLI
+/.cpcache
+/.clojure
+/clojure-workspace
+/clojure-lsp
+/.clj-kondo
+
+# Directorios de compilación y dependencias
 /target/
-/checkouts/
-.lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
-.nrepl-port
-.cpcache/
+/classes/
+/out/
+
+# Archivos de configuración específicos del entorno
+/resources/config.edn
+/resources/*.local
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Logs y reportes
+/logs/
+/reports/
+/coverage/
+
+# Herramientas de desarrollo
+/.idea/
+/.vscode/
+/*.iml
+
+# Otros archivos no necesarios
+*.jar
+*.war
+*.swp
+*.swo
+*.tmp
+*.bak
+*.log
+
+# Archivos de MacOS
+*.DS_Store
+
+# Archivos de Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
