@@ -1,8 +1,9 @@
 (ns arithmetic-calculator.server
-  (:require [io.pedestal.http :as http]
-            [arithmetic-calculator.routes :as routes]
+  (:require [arithmetic-calculator.db :as db]
+            [arithmetic-calculator.interceptors.auth :refer [auth-interceptor]]
             [arithmetic-calculator.interceptors.cors :refer [cors-interceptor]]
-            [arithmetic-calculator.interceptors.auth :refer [auth-interceptor]]))
+            [arithmetic-calculator.routes :as routes]
+            [io.pedestal.http :as http]))
 
 (def service
   {:env                     :prod
